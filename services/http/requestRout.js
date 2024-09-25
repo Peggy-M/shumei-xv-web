@@ -1,8 +1,8 @@
 //所有调用后的请求接口封装
 import request from '../../utils/request';
-export function getBannerImages() {
+export async function getBannerImages() {
   try {
-    const response = request('http://localhost:8080/shumei/getBannerImages', {
+    const response = await request('http://localhost:8080/shumei/getBannerImages', {
       method: 'GET',
       header: {
         'Content-Type': 'application/json',
